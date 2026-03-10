@@ -327,11 +327,12 @@ ${dateStr} • ${timeStr}
 <img src="${match.Logo2}" class="hero-logo">
 <span class="hero-team-name">${match.Team2}</span>
 </div>
-
+</div>
 </div>
 
-
-</div>
+<a href="${match.Livestream || "#"}" class="hero-watch-btn" target="_blank">
+ XEM NGAY
+</a>
 
 <div class="hero-progress">
 <div class="hero-progress-bar"></div>

@@ -1,4 +1,8 @@
 /* GLOBAL ESPORTS BACKGROUND */
+html,
+body {
+  height: 100%;
+}
 
 body {
   background-image: url("https://www.hok.com/wp-content/uploads/2019/06/Esports_Seating-Reconfiguration_2400.jpg");
@@ -12,9 +16,11 @@ body {
   background-repeat: no-repeat;
 
   position: relative;
-}
+  display: flex;
+  flex-direction: column;
 
-/* overlay làm tối + blur nhẹ */
+  min-height: 100vh;
+}
 
 body::before {
   content: "";
@@ -48,6 +54,58 @@ body::after {
   pointer-events: none;
 
   z-index: -1;
+}
+
+.navbar-brand {
+  text-shadow:
+    0 0 4px #ff4655,
+    0 0 8px #ff4655,
+    0 0 16px #ff4655,
+    0 0 32px rgba(255, 70, 85, 0.7);
+}
+
+.section-divider {
+  height: 2px;
+
+  margin: 80px auto;
+
+  max-width: 1200px;
+
+  background: linear-gradient(90deg, transparent, #ff4655, transparent);
+
+  box-shadow: 0 0 10px rgba(255, 70, 85, 0.6);
+}
+
+.section-title {
+  text-align: center;
+
+  margin-bottom: 40px;
+
+  position: relative;
+
+  color: #ff4655;
+}
+
+.section-title::before,
+.section-title::after {
+  content: "";
+
+  position: absolute;
+
+  top: 50%;
+
+  width: 120px;
+  height: 1px;
+
+  background: #ff4655;
+}
+
+.section-title::before {
+  left: 0;
+}
+
+.section-title::after {
+  right: 0;
 }
 
 .match-card {
@@ -214,7 +272,7 @@ body::after {
 
   object-fit: contain;
 
-  filter: drop-shadow(0 0 6px rgba(255, 0, 0, 0.6));
+  filter: drop-shadow(0 0 6px rgba(255, 70, 85, 0.7));
 }
 
 .navbar {
@@ -280,6 +338,7 @@ body::after {
 }
 
 .hero-wrapper {
+  margin-top: 50px;
   width: 90%;
   max-width: 1400px;
 
@@ -303,6 +362,39 @@ body::after {
 .hero-slide.active {
   opacity: 1;
   z-index: 2;
+}
+
+.hero-watch-btn {
+  position: absolute;
+
+  right: 100px;
+  bottom: 100px;
+
+  background: #ff4655;
+
+  color: white;
+
+  padding: 14px 26px;
+
+  border-radius: 10px;
+
+  font-weight: 600;
+
+  text-decoration: none;
+
+  font-size: 16px;
+
+  transition: all 0.25s ease;
+
+  box-shadow: 0 6px 20px rgba(255, 70, 85, 0.4);
+}
+
+.hero-watch-btn:hover {
+  background: #ff2c3e;
+
+  transform: translateY(-2px) scale(1.05);
+
+  box-shadow: 0 10px 30px rgba(255, 70, 85, 0.6);
 }
 
 .hero-overlay {
@@ -476,10 +568,6 @@ body::after {
   opacity: 0.85;
 
   letter-spacing: 0.5px;
-}
-
-.casters-section {
-  padding: 30px 0;
 }
 
 .casters-grid {
@@ -851,4 +939,119 @@ body::after {
   transform: translateY(-2px);
 
   box-shadow: 0 0 10px rgba(255, 70, 85, 0.5);
+}
+
+/* SPONSOR SECTION */
+
+.sponsor-container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* HEADER */
+
+.sponsor-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.sponsor-label {
+  font-size: 18px;
+  color: #aaa;
+
+  position: relative;
+
+  display: inline-block;
+
+  padding-left: 50px;
+}
+
+.sponsor-label::before {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  top: 50%;
+
+  width: 40px;
+  height: 2px;
+
+  background: #ff4655;
+}
+
+.sponsor-title {
+  font-size: 42px;
+
+  color: #ff4655;
+
+  margin: 10px 0 30px;
+}
+
+.sponsor-btn {
+  display: inline-block;
+
+  padding: 12px 32px;
+
+  border: 1px solid white;
+
+  color: white;
+
+  text-decoration: none;
+
+  transition: 0.3s;
+}
+
+.sponsor-btn:hover {
+  background: #ff4655;
+
+  border-color: #ff4655;
+}
+
+/* GRID */
+
+.sponsor-grid {
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 40px;
+
+  align-items: center;
+}
+
+/* ITEM */
+
+.sponsor-item {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 30px;
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  border-radius: 10px;
+
+  background: rgba(0, 0, 0, 0.3);
+
+  transition: 0.3s;
+}
+
+.sponsor-item img {
+  max-height: 75px;
+
+  transition: 0.3s;
+}
+
+.sponsor-item:hover {
+  border-color: #ff4655;
+
+  transform: translateY(-4px);
+}
+
+.sponsor-item:hover img {
+  filter: none;
+  opacity: 1;
 }
