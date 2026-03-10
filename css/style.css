@@ -1,0 +1,854 @@
+/* GLOBAL ESPORTS BACKGROUND */
+
+body {
+  background-image: url("https://www.hok.com/wp-content/uploads/2019/06/Esports_Seating-Reconfiguration_2400.jpg");
+
+  background-size: cover;
+
+  background-position: center;
+
+  background-attachment: fixed;
+
+  background-repeat: no-repeat;
+
+  position: relative;
+}
+
+/* overlay làm tối + blur nhẹ */
+
+body::before {
+  content: "";
+
+  position: fixed;
+
+  inset: 0;
+
+  background: rgba(8, 8, 12, 0.75);
+
+  backdrop-filter: blur(4px);
+
+  z-index: -1;
+}
+
+body::after {
+  content: "";
+
+  position: fixed;
+
+  inset: 0;
+
+  background:
+    radial-gradient(
+      circle at 20% 20%,
+      rgba(255, 70, 85, 0.25),
+      transparent 40%
+    ),
+    radial-gradient(circle at 80% 70%, rgba(255, 70, 85, 0.15), transparent 40%);
+
+  pointer-events: none;
+
+  z-index: -1;
+}
+
+.match-card {
+  display: grid;
+  grid-template-columns: 80px 1.5fr 1fr 120px 120px;
+  align-items: center;
+  padding: 16px 22px;
+  border-radius: 10px;
+  background: linear-gradient(90deg, #1a0507, #1a0507 60%, #0d0203);
+  margin-bottom: 12px;
+  transition: 0.25s;
+}
+
+.match-card:hover {
+  transform: translateY(-3px);
+
+  background: linear-gradient(90deg, #2a070b, #2a070b 60%, #140305);
+
+  box-shadow: 0 0 12px rgba(255, 70, 85, 0.25);
+}
+
+.match-time {
+  font-weight: 700;
+  color: #60a5fa;
+}
+
+.match-teams {
+  display: grid;
+
+  grid-template-columns: 1fr auto 1fr;
+
+  align-items: center;
+
+  gap: 12px;
+}
+
+.team-logo-box {
+  width: 28px;
+
+  height: 28px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+}
+
+.team-logo {
+  max-width: 100%;
+
+  max-height: 100%;
+
+  object-fit: contain;
+}
+
+.team {
+  display: flex;
+
+  align-items: center;
+
+  gap: 8px;
+
+  font-weight: 600;
+}
+
+.team-left {
+  justify-content: flex-end;
+
+  text-align: right;
+}
+
+.team-right {
+  justify-content: flex-start;
+
+  text-align: left;
+}
+
+.vs {
+  font-weight: 700;
+
+  color: #ff4655;
+
+  letter-spacing: 1px;
+}
+
+.match-event {
+  opacity: 0.7;
+}
+
+.match-blv {
+  color: #facc15;
+  font-weight: 600;
+}
+
+.status-live {
+  color: #ff4655;
+
+  font-weight: 700;
+
+  animation: livePulse 1.5s infinite;
+}
+
+@keyframes livePulse {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.4;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.status-upcoming {
+  color: #ff7a85;
+
+  font-weight: 600;
+}
+
+.status-ended {
+  opacity: 0.5;
+}
+
+.schedule-tabs {
+  display: flex;
+
+  gap: 10px;
+
+  margin-bottom: 20px;
+}
+
+.schedule-tab {
+  padding: 8px 18px;
+
+  border-radius: 6px;
+
+  border: none;
+
+  background: #1a0a0c;
+
+  color: white;
+
+  cursor: pointer;
+
+  transition: 0.2s;
+}
+
+.schedule-tab:hover {
+  background: #2a0e11;
+}
+
+.schedule-tab.active {
+  background: #ff4655;
+
+  color: white;
+}
+
+.navbar-brand img {
+  width: 34px;
+
+  height: 34px;
+
+  object-fit: contain;
+
+  filter: drop-shadow(0 0 6px rgba(255, 0, 0, 0.6));
+}
+
+.navbar {
+  background: #020617;
+  padding: 14px 0;
+}
+
+/* link cơ bản */
+
+.navbar-nav .nav-link {
+  color: #cbd5f5;
+
+  font-weight: 600;
+
+  padding: 8px 16px;
+
+  border-radius: 8px;
+
+  position: relative;
+
+  transition: all 0.25s ease;
+}
+
+/* hover */
+
+.navbar-nav .nav-link:hover {
+  color: white;
+
+  background: #1e293b;
+}
+
+/* active */
+
+.navbar-nav .nav-link.active {
+  color: white;
+
+  background: #dc2626;
+}
+
+.nav-link.active {
+  background: #dc2626;
+  color: white !important;
+}
+
+.hero-banner {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.hero-carousel {
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+
+#hero-carousel {
+  height: 520px;
+  position: relative;
+  overflow: hidden;
+
+  border-radius: 10px;
+}
+
+.hero-wrapper {
+  width: 90%;
+  max-width: 1400px;
+
+  position: relative;
+}
+
+.hero-slide {
+  position: absolute;
+  inset: 0;
+
+  background-size: cover;
+  background-position: center;
+
+  display: flex;
+  align-items: center;
+
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+.hero-slide.active {
+  opacity: 1;
+  z-index: 2;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 0.85),
+    rgba(0, 0, 0, 0.4),
+    rgba(0, 0, 0, 0)
+  );
+}
+
+.hero-content {
+  position: absolute;
+
+  left: 8%;
+
+  bottom: 18%;
+
+  z-index: 3;
+
+  color: #fff;
+
+  max-width: 600px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 18px;
+}
+
+.hero-status {
+  font-size: 14px;
+
+  letter-spacing: 2px;
+
+  text-transform: uppercase;
+
+  font-weight: 700;
+
+  color: #ff4655;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 8px;
+}
+
+.hero-nav {
+  position: absolute;
+  bottom: 30px;
+  right: 40px;
+  z-index: 5;
+}
+
+.hero-nav button {
+  background: #ff4655;
+
+  border: none;
+
+  color: white;
+
+  font-size: 22px;
+
+  padding: 8px 14px;
+
+  margin-left: 10px;
+
+  cursor: pointer;
+
+  border-radius: 4px;
+}
+
+.hero-nav button:hover {
+  background: #ff2a3d;
+}
+
+.hero-match {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 20px;
+  font-size: 36px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  line-height: 1.1;
+
+  text-transform: uppercase;
+}
+
+.hero-team {
+  display: flex;
+
+  align-items: center;
+
+  gap: 16px;
+}
+
+.hero-logo {
+  width: 60px;
+
+  height: 60px;
+
+  object-fit: contain;
+}
+
+.hero-vs {
+  font-size: 22px;
+
+  font-weight: 700;
+
+  letter-spacing: 3px;
+
+  opacity: 0.85;
+
+  margin-left: 70px;
+}
+
+.hero-team-name {
+  font-size: 36px;
+
+  font-weight: 800;
+
+  letter-spacing: 1px;
+}
+
+.hero-countdown {
+  font-size: 18px;
+  font-weight: 600;
+  color: #ff4655;
+}
+
+.hero-progress {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.hero-time-row {
+  display: flex;
+
+  align-items: center;
+
+  gap: 16px;
+
+  margin-top: 8px;
+
+  font-size: 16px;
+
+  opacity: 0.9;
+}
+
+.hero-progress-bar {
+  height: 100%;
+  width: 0%;
+  background: #ff4655;
+
+  transition: width 0.1s linear;
+}
+
+.hero-datetime {
+  font-size: 18px;
+
+  opacity: 0.85;
+
+  letter-spacing: 0.5px;
+}
+
+.casters-section {
+  padding: 30px 0;
+}
+
+.casters-grid {
+  display: grid;
+
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+
+  gap: 40px;
+
+  max-width: 1100px;
+
+  margin: auto;
+}
+
+.caster-card {
+  position: relative;
+
+  background: linear-gradient(145deg, #0f0f0f, #1c1c1c);
+
+  border-radius: 16px;
+
+  padding: 35px 25px;
+
+  text-align: center;
+
+  overflow: hidden;
+
+  transition: 0.35s;
+
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.caster-card::before {
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255, 70, 85, 0.25),
+    transparent
+  );
+
+  opacity: 0;
+
+  transition: 0.4s;
+}
+
+.caster-card:hover {
+  transform: translateY(-12px) scale(1.03);
+
+  border: 1px solid rgba(255, 70, 85, 0.6);
+
+  box-shadow:
+    0 0 25px rgba(255, 70, 85, 0.4),
+    0 0 50px rgba(255, 70, 85, 0.2);
+}
+
+.caster-card:hover::before {
+  opacity: 1;
+}
+
+.caster-avatar {
+  width: 120px;
+
+  height: 120px;
+
+  border-radius: 50%;
+
+  object-fit: cover;
+
+  margin-bottom: 18px;
+
+  border: 3px solid #ff4655;
+
+  box-shadow:
+    0 0 10px #ff4655,
+    0 0 25px rgba(255, 70, 85, 0.7),
+    0 0 40px rgba(255, 70, 85, 0.4);
+
+  transition: 0.3s;
+}
+
+.caster-card:hover .caster-avatar {
+  transform: scale(1.1);
+
+  box-shadow:
+    0 0 15px #ff4655,
+    0 0 35px #ff4655,
+    0 0 60px rgba(255, 70, 85, 0.8);
+}
+
+.caster-name {
+  font-size: 20px;
+
+  font-weight: 700;
+
+  margin-bottom: 8px;
+
+  color: #fff;
+
+  letter-spacing: 1px;
+}
+
+.caster-desc {
+  font-size: 14px;
+
+  opacity: 0.75;
+
+  line-height: 1.6;
+
+  max-width: 220px;
+
+  margin: auto;
+}
+
+/* ============================= */
+/* FOOTER */
+/* ============================= */
+
+.site-footer {
+  background: #0b0b0b;
+
+  border-top: 2px solid #ff4655;
+
+  padding: 60px 0 30px;
+
+  margin-top: 80px;
+}
+
+.footer-container {
+  width: 90%;
+
+  max-width: 1200px;
+
+  margin: auto;
+}
+
+/* GRID */
+
+.footer-grid {
+  display: grid;
+
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+
+  gap: 40px;
+}
+
+/* BRAND */
+
+.footer-logo {
+  color: #ff4655;
+
+  font-size: 22px;
+
+  margin-bottom: 10px;
+}
+
+.footer-desc {
+  opacity: 0.75;
+
+  line-height: 1.6;
+
+  font-size: 14px;
+
+  max-width: 320px;
+}
+
+/* LINKS */
+
+.footer-links h4 {
+  margin-bottom: 15px;
+
+  font-size: 16px;
+}
+
+.footer-links ul {
+  list-style: none;
+
+  padding: 0;
+
+  margin: 0;
+}
+
+.footer-links li {
+  margin-bottom: 8px;
+}
+
+.footer-links a {
+  color: #aaa;
+
+  text-decoration: none;
+
+  transition: 0.25s;
+}
+
+.footer-links a:hover {
+  color: #ff4655;
+}
+
+/* CONTACT */
+
+.footer-links p {
+  opacity: 0.75;
+
+  font-size: 14px;
+
+  margin-bottom: 6px;
+}
+
+/* BOTTOM */
+
+.footer-bottom {
+  margin-top: 50px;
+
+  padding-top: 20px;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+
+  text-align: center;
+
+  font-size: 14px;
+
+  opacity: 0.6;
+}
+
+/* SOCIAL PAGE */
+
+.social-section {
+  position: relative;
+
+  padding: 100px 0;
+
+  background-image: url("https://www.hok.com/wp-content/uploads/2019/06/Esports_Seating-Reconfiguration_2400.jpg");
+
+  background-size: cover;
+
+  background-position: center;
+
+  background-attachment: fixed;
+}
+
+.social-section::before {
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  background: rgba(10, 10, 15, 0.75);
+
+  backdrop-filter: blur(6px);
+}
+
+.social-container {
+  position: relative;
+
+  max-width: 1100px;
+
+  margin: auto;
+
+  padding: 0 20px;
+
+  z-index: 2;
+}
+
+.social-row {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 50px;
+
+  align-items: center;
+
+  margin-bottom: 100px;
+}
+
+.social-row.reverse {
+  direction: rtl;
+}
+
+.social-row.reverse .social-content {
+  direction: ltr;
+}
+
+.social-image {
+  overflow: hidden;
+
+  border-radius: 10px;
+
+  position: relative;
+}
+
+.social-image img {
+  width: 100%;
+
+  display: block;
+
+  transition: transform 0.7s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.social-row:hover img {
+  transform: scale(1.08);
+}
+
+.social-image::after {
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.5), transparent);
+
+  opacity: 0.7;
+
+  transition: 0.3s;
+}
+
+.social-row {
+  transition: 0.35s;
+}
+
+.social-row:hover {
+  transform: translateY(-6px);
+}
+
+.social-content h2 {
+  font-size: 28px;
+
+  margin-bottom: 15px;
+}
+
+.social-content p {
+  opacity: 0.7;
+
+  margin-bottom: 20px;
+
+  line-height: 1.6;
+}
+
+.social-btn {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 8px;
+
+  padding: 10px 18px;
+
+  border-radius: 30px;
+
+  background: #ff4655;
+
+  color: white;
+
+  text-decoration: none;
+
+  font-weight: 600;
+
+  transition: 0.25s;
+}
+
+.social-btn:hover {
+  transform: translateY(-2px);
+
+  box-shadow: 0 0 10px rgba(255, 70, 85, 0.5);
+}
