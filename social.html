@@ -1,141 +1,85 @@
 <!doctype html>
 <html lang="vi">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
-    />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
 
-    <link rel="stylesheet" href="css/style.css" />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/icons/bootstrap-icons.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
 
-    <title>Valorant VN</title>
-  </head>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="preload" href="assets/fonts/orbitron-500.woff2" as="font" type="font/woff2" crossorigin>
+  <title>Valorant VN</title>
+</head>
 
-  <body class="bg-dark text-white">
-    <!-- Navbar -->
-    <div id="navbar"></div>
+<body class="bg-dark text-white">
+  <div id="navbar"></div>
 
-    <section class="social-section">
-      <div class="social-container">
-        <div class="social-row">
-          <div class="social-image">
-            <img
-              src="https://i.pcmag.com/imagery/reviews/04SPR60EVOFwPWjuw5pLLNb-28.fit_scale.size_400x225.v1615506318.png"
-            />
-          </div>
-          <div class="social-content">
-            <h2>TELEGRAM</h2>
-            <p>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vitae
-              quae non exercitationem veniam labore consequatur illum, quas
-              possimus deserunt doloribus nam, odit molestiae aspernatur
-              voluptate eligendi, nostrum error? Dignissimos, ut?
-            </p>
-            <a href="https://t.me/kidvct" class="social-btn"> THAM GIA NGAY </a>
-          </div>
-        </div>
+  <main class="social-page mt-5 mb-5">
+    <div class="container">
+      <div class="livestream-section pb-5">
+        <h2 class="section-title">Kênh phát sóng</h2>
 
-        <div class="social-row reverse">
-          <div class="social-image">
-            <img
-              src="https://cdn2.fptshop.com.vn/unsafe/1920x0/filters:format(webp):quality(75)/2023_11_7_638349680397037528_fanpage-la-gi-0.jpeg"
-            />
-          </div>
+        <div class="livestream-grid">
+          <a href="https://www.youtube.com/@valoranttiengviet2" class="livestream-banner">
+            <img src="assets/banner/bannervlr.png" />
+            <div class="livestream-title">Valorant</div>
+          </a>
 
-          <div class="social-content">
-            <h2>FANPAGE</h2>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic ex,
-              vero eligendi dolorum, expedita placeat vel amet ducimus, omnis
-              voluptates maiores animi! Voluptate dignissimos recusandae
-              voluptas! Perspiciatis, sit? Vel, ea.
-            </p>
-            <a
-              href="https://www.facebook.com/valoranttiengviet0/"
-              class="social-btn"
-            >
-              THEO DÕI
+          <a href="https://www.youtube.com/@aovtiengviet" class="livestream-banner">
+            <img src="assets/banner/banneraov.png" />
+            <div class="livestream-title">Liên Quân Mobile</div>
+
+            <a href="https://www.youtube.com/@sanfpstv" class="livestream-banner">
+              <img src="assets/banner/bannercs2.png" />
+              <div class="livestream-title">Counter-Strike 2</div>
             </a>
-          </div>
-        </div>
 
-        <div class="social-row">
-          <div class="social-image">
-            <img
-              src="https://news.vio.vn/wp-content/uploads/2025/05/cach-tao-nhom-facebook-1.jpg"
-            />
-          </div>
-          <div class="social-content">
-            <h2>GROUP FACEBOOK</h2>
-            <p>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vitae
-              quae non exercitationem veniam labore consequatur illum, quas
-              possimus deserunt doloribus nam, odit molestiae aspernatur
-              voluptate eligendi, nostrum error? Dignissimos, ut?
-            </p>
-            <a
-              href="https://www.facebook.com/groups/fpstiengviet/"
-              class="social-btn"
-            >
-              THAM GIA NGAY
+            <a href="https://www.youtube.com/@sanlplvn2" class="livestream-banner">
+              <img src="assets/banner/bannerlol.png" />
+              <div class="livestream-title">Liên Minh Huyền Thoại</div>
             </a>
-          </div>
-        </div>
-
-        <div class="social-row reverse">
-          <div class="social-image">
-            <img
-              src="https://www.internetmatters.org/wp-content/uploads/2024/08/tiktok-logo-2.png"
-            />
-          </div>
-          <div class="social-content">
-            <h2>TIKTOK</h2>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic ex,
-              vero eligendi dolorum, expedita placeat vel amet ducimus, omnis
-              voluptates maiores animi! Voluptate dignissimos recusandae
-              voluptas! Perspiciatis, sit? Vel, ea.
-            </p>
-            <a
-              href="https://www.tiktok.com/@valorant.tiengviet"
-              class="social-btn"
-            >
-              THEO DÕI
-            </a>
-          </div>
-        </div>
-
-        <div class="social-row">
-          <div class="social-image">
-            <img
-              src="https://supportdevs.com/wp-content/uploads/2024/08/discord-features-review.jpg"
-            />
-          </div>
-          <div class="social-content">
-            <h2>DISCORD</h2>
-            <p>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vitae
-              quae non exercitationem veniam labore consequatur illum, quas
-              possimus deserunt doloribus nam, odit molestiae aspernatur
-              voluptate eligendi, nostrum error? Dignissimos, ut?
-            </p>
-            <a href="https://discord.com/invite/tZ7sDvF4Fr" class="social-btn">
-              THAM GIA NGAY
-            </a>
-          </div>
+          </a>
         </div>
       </div>
-    </section>
 
-    <!-- Footer -->
-    <div id="footer"></div>
+      <div class="social-media pt-5">
+        <h2 class="section-title">Social Media</h2>
 
-    <script src="js/script.js"></script>
-  </body>
+        <div class="beacons-links">
+          <a href="https://discord.com/invite/tZ7sDvF4Fr" class="beacons-pill">
+            <i class="bi bi-discord"></i>
+            Discord
+          </a>
+
+          <a href="https://www.facebook.com/valoranttiengviet0/" class="beacons-pill">
+            <i class="bi bi-facebook"></i>
+            Fanpage
+          </a>
+
+          <a href="https://www.facebook.com/groups/fpstiengviet/" class="beacons-pill">
+            <i class="bi bi-people-fill"></i>
+            Group Facebook
+          </a>
+
+          <a href="https://www.tiktok.com/@valorant.tiengviet" class="beacons-pill">
+            <i class="bi bi-tiktok"></i>
+            TikTok
+          </a>
+
+          <a href="https://t.me/kidvct" class="beacons-pill">
+            <i class="bi bi-telegram"></i>
+            Nhóm Telegram
+          </a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <div id="footer"></div>
+
+  <script src="js/script.js"></script>
+</body>
+
 </html>

@@ -303,11 +303,10 @@ function initHero() {
 <div class="hero-overlay"></div>
 
 <div class="hero-content">
-
 <h1>VALORANT TIẾNG VIỆT</h1>
 
 <div class="hero-status">
-${status === "live" ? "🔴 LIVE NOW" : "NEXT MATCH"}
+${status === "live" ? "🔴 ĐANG TRỰC TIẾP" : "TRẬN TIẾP THEO"}
 </div>
 
 <div class="hero-datetime">
@@ -331,7 +330,7 @@ ${dateStr} • ${timeStr}
 </div>
 
 <a href="${match.Livestream || "#"}" class="hero-watch-btn" target="_blank">
- XEM NGAY
+ <i class="bi bi-play-btn-fill"></i> XEM NGAY
 </a>
 
 <div class="hero-progress">
@@ -528,3 +527,19 @@ function setScheduleTab(btn, day) {
 
   showDay(day);
 }
+
+fetch("agents.json", { cache: "force-cache" })
+  .then((res) => res.json())
+  .then((data) => {
+    const container = document.getElementById("agents");
+
+    data.forEach((agent) => {
+      container.innerHTML += `
+<div class="agent-card">
+  <img loading="lazy" src="${agent.image}" alt="${agent.name}">
+  <h3>${agent.name}</h3>
+  <p>${agent.role}</p>
+</div>
+`;
+    });
+  });
