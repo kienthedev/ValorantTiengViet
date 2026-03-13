@@ -536,16 +536,17 @@ fetch("agents.json", { cache: "force-cache" })
   .then((res) => res.json())
   .then((data) => {
     const container = document.getElementById("agents");
-
-    data.forEach((agent) => {
-      container.innerHTML += `
+    if (container) {
+      data.forEach((agent) => {
+        container.innerHTML += `
 <div class="agent-card">
   <img loading="lazy" src="${agent.image}" alt="${agent.name}">
   <h3>${agent.name}</h3>
   <p>${agent.role}</p>
 </div>
 `;
-    });
+      });
+    }
   });
 
 let scrollPosition = 0;
