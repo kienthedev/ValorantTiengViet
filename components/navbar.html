@@ -1,5 +1,6 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-black border-bottom border-secondary">
   <div class="container">
+
     <a class="navbar-brand d-flex align-items-center gap-2 fw-bold text-danger" href="index.html">
       <img src="assets/ValoranTV.png" alt="Logo" width="32" height="32" />
 
@@ -14,7 +15,9 @@
     </button>
 
     <div class="collapse navbar-collapse" id="navbarNav">
+
       <ul class="navbar-nav ms-auto gap-4">
+
         <li class="nav-item">
           <a class="nav-link" data-page="index" href="index.html">Trang chủ</a>
         </li>
@@ -23,14 +26,37 @@
           <a class="nav-link" data-page="social" href="social.html">Social Media</a>
         </li>
 
-        <li class="nav-item">
-          <a class="nav-link" data-page="agents" href="agents.html">Đặc vụ</a>
+        <!-- INFO DROPDOWN -->
+        <li class="nav-item dropdown">
+
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+            Cẩm nang
+          </a>
+
+          <ul class="dropdown-menu dropdown-menu-dark">
+
+            <li>
+              <a class="dropdown-item" href="agents.html">
+                Đặc vụ
+              </a>
+            </li>
+
+            <li>
+              <a class="dropdown-item" href="maps.html">
+                Bản đồ
+              </a>
+            </li>
+
+          </ul>
+
         </li>
 
         <li class="nav-item">
           <a class="nav-link" data-page="event" href="event.html">Sự kiện</a>
         </li>
+
       </ul>
+
     </div>
   </div>
 </nav>

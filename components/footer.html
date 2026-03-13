@@ -1,6 +1,7 @@
 <footer class="site-footer">
   <div class="footer-container">
     <div class="footer-grid">
+
       <!-- Brand -->
       <div class="footer-brand">
         <h3 class="footer-logo">VALORANT TIẾNG VIỆT</h3>
@@ -17,6 +18,7 @@
           <li><a href="index.html">Trang chủ</a></li>
           <li><a href="social.html">Social Media</a></li>
           <li><a href="agents.html">Đặc vụ</a></li>
+          <li><a href="maps.html">Bản đồ</a></li>
           <li><a href="event.html">Sự kiện</a></li>
         </ul>
       </div>
@@ -36,9 +38,13 @@
       <!-- Contact -->
       <div class="footer-links">
         <h4>Liên hệ</h4>
-        <p>Email: adams93.mkt@gmail.com</p>
-        <p>Hợp tác / tài trợ</p>
+        <ul>
+          <li><a href="#">adams93.mkt@gmail.com</a></li>
+          <li><a href="#" onclick="openTerms()">Điều khoản sử dụng</a></li>
+          <li><a href="#" onclick="openPrivacy()">Chính sách bảo mật</a></li>
+        </ul>
       </div>
+
     </div>
 
     <div class="footer-bottom">
@@ -46,3 +52,113 @@
     </div>
   </div>
 </footer>
+
+<!-- ================= PRIVACY POLICY ================= -->
+
+<div id="privacyModal" class="policy-modal">
+  <div class="policy-modal-box">
+
+    <button class="policy-close" onclick="closePrivacy()">✕</button>
+
+    <h2>Chính sách bảo mật (Privacy Policy)</h2>
+
+    <p>
+      Website này được xây dựng nhằm cung cấp lịch thi đấu và thông tin liên
+      quan đến lịch livestream giải đấu esports như Valorant, League of Legends
+      và Counter-Strike 2.
+    </p>
+
+    <h3>Cookie</h3>
+    <p>
+      Website có thể sử dụng cookie để nâng cao hiệu suất hoạt động,
+      phân tích lưu lượng truy cập và cải thiện nội dung.
+    </p>
+
+    <h3>Bảo mật thông tin</h3>
+    <p>
+      Chúng tôi không bán, trao đổi hoặc chia sẻ thông tin cá nhân của
+      người dùng với bên thứ ba, trừ khi có yêu cầu từ cơ quan pháp luật.
+    </p>
+
+    <h3>Liên kết bên ngoài</h3>
+    <p>
+      Website có thể chứa liên kết đến các trang web khác. Tất cả đều là
+      link livestream của hệ thống kênh trên nền tảng YouTube hoặc Twitch.
+    </p>
+
+    <h3>Thay đổi chính sách</h3>
+    <p>
+      Chính sách bảo mật này có thể được cập nhật theo thời gian để
+      phản ánh các thay đổi trong hoạt động của website.
+    </p>
+
+    <h3>Liên hệ</h3>
+    <p>
+      Nếu bạn có bất kỳ câu hỏi nào về chính sách bảo mật,
+      vui lòng liên hệ qua email được cung cấp trên website.
+    </p>
+
+  </div>
+</div>
+
+<!-- ================= TERMS ================= -->
+
+<div id="termsModal" class="policy-modal">
+  <div class="policy-modal-box">
+
+    <button class="policy-close" onclick="closeTerms()">✕</button>
+
+    <h2>Điều khoản sử dụng (Terms of Service)</h2>
+
+    <p>
+      Khi truy cập và sử dụng website này, bạn đồng ý tuân thủ các điều
+      khoản và điều kiện dưới đây.
+    </p>
+
+    <h3>Mục đích nội dung</h3>
+    <p>
+      Tất cả thông tin trên website, bao gồm lịch thi đấu esports và
+      các nội dung liên quan, chỉ được cung cấp nhằm mục đích tham
+      khảo và thông tin.
+    </p>
+
+    <h3>Độ chính xác của thông tin</h3>
+    <p>
+      Chúng tôi cố gắng cung cấp thông tin chính xác và cập nhật nhất.
+      Tuy nhiên, chúng tôi không đảm bảo rằng mọi thông tin luôn hoàn
+      toàn chính xác hoặc không có sai sót.
+    </p>
+
+    <h3>Quyền sở hữu nội dung</h3>
+    <p>
+      Tất cả nội dung, thiết kế và tài liệu trên website đều thuộc
+      quyền sở hữu của website và được bảo vệ bởi luật bản quyền.
+    </p>
+
+    <h3>Liên kết đến website khác</h3>
+    <p>
+      Website có thể chứa liên kết đến các trang web bên thứ ba.
+      Tất cả đều là link livestream của hệ thống kênh trên nền tảng
+      YouTube hoặc Twitch.
+    </p>
+
+    <h3>Giới hạn trách nhiệm</h3>
+    <p>
+      Chúng tôi không chịu trách nhiệm đối với bất kỳ thiệt hại
+      hoặc tổn thất nào phát sinh từ việc sử dụng thông tin
+      trên website.
+    </p>
+
+    <h3>Thay đổi điều khoản</h3>
+    <p>
+      Chúng tôi có quyền thay đổi hoặc cập nhật các điều khoản này
+      bất kỳ lúc nào mà không cần thông báo trước.
+    </p>
+
+    <p>
+      Website này không liên kết chính thức với Riot Games,
+      Valve hoặc bất kỳ tổ chức esports nào.
+    </p>
+
+  </div>
+</div>
