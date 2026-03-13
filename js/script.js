@@ -550,10 +550,14 @@ fetch("agents.json", { cache: "force-cache" })
 
 let scrollPosition = 0;
 document.addEventListener("DOMContentLoaded", function () {
-  fetch("footer.html")
+  fetch("components/footer.html")
     .then((res) => res.text())
     .then((data) => {
-      document.getElementById("footer").innerHTML = data;
+      const footer = document.getElementById("footer");
+
+      if (footer) {
+        footer.innerHTML = data;
+      }
       initPolicyModal();
     });
 });
@@ -575,7 +579,7 @@ function closeModal(modal) {
   document.body.classList.remove("modal-open");
   window.scrollTo({
     top: scrollPosition,
-    behavior: "instant"
+    behavior: "instant",
   });
 }
 
