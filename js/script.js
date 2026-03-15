@@ -51,6 +51,11 @@ const castersData = [
     avatar: "assets/casters/bun-caster.jpg",
     description: "Bốn lùn",
   },
+  {
+    name: "Dứa",
+    avatar: "assets/casters/dua-caster.jpg",
+    description: "Dốn lừa",
+  },
 ];
 
 // ================================
@@ -121,7 +126,9 @@ function setActiveNav() {
 
 async function loadMatches() {
   try {
-    const res = await fetch(SHEET_URL);
+    const res = await fetch(SHEET_URL, {
+      cache: "no-store",
+    });
 
     matchesData = await res.json();
   } catch (err) {
@@ -184,9 +191,9 @@ function renderMatches(targetDate) {
     if (match.Livestream) {
       card.style.cursor = "pointer";
 
-      card.onclick = () => {
+      card.addEventListener("click", () => {
         window.open(match.Livestream, "_blank");
-      };
+      });
     }
     card.innerHTML = `
     
@@ -307,7 +314,7 @@ function initHero() {
 <div class="hero-overlay"></div>
 
 <div class="hero-content">
-<h1>VALORANT TIẾNG VIỆT</h1>
+<h1>${match.Event.toUpperCase()}</h1>
 
 <div class="hero-status">
 ${status === "live" ? "🔴 ĐANG TRỰC TIẾP" : "TRẬN TIẾP THEO"}
@@ -532,20 +539,27 @@ function setScheduleTab(btn, day) {
   showDay(day);
 }
 
+const fragment = document.createDocumentFragment();
+
 fetch("agents.json", { cache: "force-cache" })
   .then((res) => res.json())
   .then((data) => {
     const container = document.getElementById("agents");
     if (container) {
       data.forEach((agent) => {
-        container.innerHTML += `
-<div class="agent-card">
+        const div = document.createElement("div");
+        div.className = "agent-card";
+
+        div.innerHTML = `
   <img loading="lazy" src="${agent.image}" alt="${agent.name}">
   <h3>${agent.name}</h3>
   <p>${agent.role}</p>
-</div>
-`;
+  `;
+
+        fragment.appendChild(div);
       });
+
+      container.appendChild(fragment);
     }
   });
 

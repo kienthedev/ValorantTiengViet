@@ -3,86 +3,102 @@
 
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description"
+    content="Website Valorant Tiếng Việt cập nhật tin tức, giải đấu, livestream Valorant esports bằng tiếng Việt.">
+  <meta name="keywords" content="valorant tiếng việt, valorant esports, xem valorant live, valorant vn">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta property="og:title" content="Valorant Tiếng Việt">
+  <meta property="og:description"
+    content="Kênh bình luận các giải đấu Valorant với phong cách phân tích chiến thuật và giải trí dành cho cộng đồng game thủ Việt.">
+  <meta property="og:image" content="https://valoranttiengviet.com/assets/ValoranTV.png">
+  <meta property="og:url" content="https://valoranttiengviet.com">
+  <meta property="og:type" content="website">
+
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="assets/icons/bootstrap-icons.css">
   <link rel="stylesheet" href="assets/css/bootstrap.min.css">
 
   <link rel="stylesheet" href="css/style.css" />
-  <title>Valorant VN</title>
+  <title>Valorant Tiếng Việt</title>
 </head>
 
 <body class="bg-dark text-white">
   <!-- Navbar -->
   <div id="navbar"></div>
 
-  <!-- Banner -->
-  <section id="hero-banner" class="hero-banner">
-    <div class="hero-wrapper">
-      <div id="hero-carousel"></div>
-      <div class="hero-nav">
-        <button id="hero-prev">❮</button>
-        <button id="hero-next">❯</button>
-      </div>
-    </div>
-  </section>
-
-  <div class="section-divider"></div>
-
-  <!-- Schedule -->
-  <div class="schedule-section">
-    <div class="container">
-      <h2 class="section-title">SCHEDULE</h2>
-
-      <div class="schedule-tabs">
-        <button class="schedule-tab active" onclick="setScheduleTab(this, 'today')">
-          Hôm nay
-        </button>
-
-        <button class="schedule-tab" onclick="setScheduleTab(this, 'tomorrow')">
-          Ngày mai
-        </button>
-      </div>
-
-      <div id="matches-container"></div>
-    </div>
-  </div>
-
-  <!-- Caster -->
-  <section class="casters-section">
-    <div class="container">
-      <h2 class="section-title">CASTERS</h2>
-
-      <div id="casters-container" class="casters-grid"></div>
-    </div>
-  </section>
-
-  <div class="section-divider"></div>
-
-  <!-- Sponsor -->
-  <section class="sponsor-section">
-    <div class="sponsor-container">
-      <h2 class="section-title">PARTNERS & CLIENTS</h2>
-
-      <div class="sponsor-grid">
-        <div class="sponsor-item">
-          <img src="assets/sponsors/tg_image_527335784.png" />
-        </div>
-
-        <div class="sponsor-item">
-          <img src="assets/sponsors/filters_quality(80).jpg" />
-        </div>
-
-        <div class="sponsor-item">
-          <img src="assets/sponsors/channels4_profile.jpg" />
-        </div>
-
-        <div class="sponsor-item">
-          <img src="assets/sponsors/images.png" />
+  <main>
+    <!-- Banner -->
+    <section id="hero-banner" class="hero-banner">
+      <div class="container">
+        <div class="hero-wrapper">
+          <div id="hero-carousel" class="hero-carousel"></div>
+          <div class="hero-nav">
+            <button id="hero-prev">❮</button>
+            <button id="hero-next">❯</button>
+          </div>
         </div>
       </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- Schedule -->
+    <div class="schedule-section">
+      <div class="container">
+        <h2 class="section-title">SCHEDULE</h2>
+
+        <div class="schedule-tabs">
+          <button class="schedule-tab active" onclick="setScheduleTab(this, 'today')">
+            Hôm nay
+          </button>
+
+          <button class="schedule-tab" onclick="setScheduleTab(this, 'tomorrow')">
+            Ngày mai
+          </button>
+        </div>
+
+        <div id="matches-container"></div>
+      </div>
     </div>
-  </section>
+
+    <div class="section-divider"></div>
+
+    <!-- Caster -->
+    <section class="casters-section">
+      <div class="container">
+        <h2 class="section-title">CASTERS</h2>
+
+        <div id="casters-container" class="casters-grid"></div>
+      </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- Sponsor -->
+    <section class="sponsor-section">
+      <div class="container sponsor-container">
+        <h2 class="section-title">PARTNERS & CLIENTS</h2>
+
+        <div class="sponsor-grid">
+          <div class="sponsor-item">
+            <img src="assets/sponsors/tg_image_527335784.png" loading="lazy" alt="Sponsor" />
+          </div>
+
+          <div class="sponsor-item">
+            <img src="assets/sponsors/filters_quality(80).jpg" loading="lazy" alt="Sponsor" />
+          </div>
+
+          <div class="sponsor-item">
+            <img src="assets/sponsors/channels4_profile.jpg" loading="lazy" alt="Sponsor" />
+          </div>
+
+          <div class="sponsor-item">
+            <img src="assets/sponsors/images.png" loading="lazy" alt="Sponsor" />
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
 
   <div class="section-divider"></div>
 
