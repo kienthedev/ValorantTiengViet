@@ -11,6 +11,10 @@ const SHEET_URL =
 
 let matchesData = [];
 
+if (location.pathname.endsWith("index.html")) {
+  location.replace(location.pathname.replace("index.html", ""));
+}
+
 // ================================
 // CASTERS DATA (HARDCODE)
 // ================================
