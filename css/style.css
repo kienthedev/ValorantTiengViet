@@ -930,6 +930,15 @@ body::after {
   border-radius: 10px;
 }
 
+.event-section ul li {
+  margin-bottom: 8px;
+}
+
+.section-title {
+  font-family: "Orbitron", sans-serif;
+  font-size: 32px;
+}
+
 /* ===== Modal Background ===== */
 
 .policy-modal {
