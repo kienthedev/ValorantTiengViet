@@ -313,7 +313,7 @@ function initHero() {
 
 <div class="hero-overlay"></div>
 
-<div class="hero-content">
+<div class="hero-content hero-desktop">
 <h1>${match.Event.toUpperCase()}</h1>
 
 <div class="hero-status">
@@ -338,6 +338,22 @@ ${dateStr} • ${timeStr}
 <span class="hero-team-name">${match.Team2}</span>
 </div>
 </div>
+</div>
+
+<div class="hero-mobile">
+
+<div class="hero-team">
+<img src="${match.Logo1}" class="hero-logo">
+<span class="hero-team-name">${match.Team1}</span>
+</div>
+
+<div class="hero-vs">VS</div>
+
+<div class="hero-team">
+<img src="${match.Logo2}" class="hero-logo">
+<span class="hero-team-name">${match.Team2}</span>
+</div>
+
 </div>
 
 <a href="${match.Livestream || "#"}" class="hero-watch-btn" target="_blank">
@@ -376,6 +392,8 @@ ${dateStr} • ${timeStr}
   if (prevBtn) {
     prevBtn.onclick = () => changeHeroSlide(-1);
   }
+
+  enableHeroSwipe();
 }
 
 let heroTimer = null;
@@ -408,19 +426,19 @@ function startHeroSlider() {
 }
 
 function changeHeroSlide(dir) {
+  if (heroTimer) {
+    clearInterval(heroTimer);
+    startHeroSlider();
+  }
+
   if (heroSlides.length === 0) return;
 
   heroSlides[heroIndex].classList.remove("active");
 
   heroIndex += dir;
 
-  if (heroIndex < 0) {
-    heroIndex = heroSlides.length - 1;
-  }
-
-  if (heroIndex >= heroSlides.length) {
-    heroIndex = 0;
-  }
+  if (heroIndex < 0) heroIndex = heroSlides.length - 1;
+  if (heroIndex >= heroSlides.length) heroIndex = 0;
 
   heroSlides[heroIndex].classList.add("active");
 }
@@ -465,6 +483,34 @@ function setHeroChannel() {
 
 </div>
 `;
+}
+
+let startX = 0;
+let endX = 0;
+
+function enableHeroSwipe() {
+  const carousel = document.getElementById("hero-carousel");
+  if (!carousel) return;
+
+  carousel.addEventListener("touchstart", (e) => {
+    startX = e.touches[0].clientX;
+  });
+
+  carousel.addEventListener("touchmove", (e) => {
+    endX = e.touches[0].clientX;
+  });
+
+  carousel.addEventListener("touchend", () => {
+    const diff = startX - endX;
+
+    if (Math.abs(diff) < 50) return;
+
+    if (diff > 0) {
+      changeHeroSlide(1); // swipe left -> next
+    } else {
+      changeHeroSlide(-1); // swipe right -> prev
+    }
+  });
 }
 
 // ================================
