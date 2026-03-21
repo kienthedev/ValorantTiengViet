@@ -636,7 +636,7 @@ body::after {
 
 .livestream-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
   gap: 20px;
   max-width: 1000px;
   margin: auto;
@@ -1259,4 +1259,40 @@ body.modal-open {
   .hero-nav {
     display: none;
   }
+}
+
+.tele-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 55px;
+  height: 55px;
+  background: #0088cc;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  z-index: 9999;
+  transition: all 0.3s ease;
+  padding: 0;
+  animation: pulse 2s infinite;
+}
+
+.tele-btn img {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+  display: block;
+}
+
+.tele-btn:hover {
+  transform: scale(1.1);
+  background: #0077b5;
+}
+
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 0 rgba(0,136,204, 0.7); }
+  70% { box-shadow: 0 0 0 10px rgba(0,136,204, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(0,136,204, 0); }
 }
