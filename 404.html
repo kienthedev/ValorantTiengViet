@@ -1,0 +1,11 @@
+<script>
+    (function () {
+        var path = window.location.pathname;
+
+        // Nếu không có .html → thử thêm .html
+        if (!path.endsWith(".html")) {
+            var newUrl = path + ".html" + window.location.search + window.location.hash;
+            window.location.replace(newUrl);
+        }
+    })();
+</script>

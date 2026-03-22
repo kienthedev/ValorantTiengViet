@@ -15,6 +15,27 @@ if (location.pathname.endsWith("index.html")) {
   location.replace(location.pathname.replace("index.html", ""));
 }
 
+(function () {
+  const path = window.location.pathname;
+
+  // Nếu URL có .html → bỏ đi
+  if (path.endsWith(".html")) {
+    const newPath = path.replace(".html", "");
+    window.history.replaceState({}, "", newPath);
+  }
+
+  // Nếu truy cập dạng /about → load about.html
+  if (!path.endsWith("/") && !path.includes(".")) {
+    fetch(path + ".html")
+      .then((res) => {
+        if (res.ok) {
+          window.location.replace(path + ".html");
+        }
+      })
+      .catch(() => {});
+  }
+})();
+
 // ================================
 // CASTERS DATA (HARDCODE)
 // ================================
