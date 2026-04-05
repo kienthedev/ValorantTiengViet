@@ -83,12 +83,6 @@ const castersData = [
     description: "Bốn lùn",
     link: "https://blvkeo.com/vi/?inviteCode=blvbun"
   },
-  {
-    name: "Dứa",
-    avatar: "assets/casters/dua-caster.jpg",
-    description: "Dốn lừa",
-    link: "https://blvkeo.com/vi/?inviteCode=blvdua"
-  },
 ];
 
 // ================================
