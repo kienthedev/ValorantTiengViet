@@ -45,41 +45,49 @@ const castersData = [
     name: "Fox",
     avatar: "assets/casters/fox-caster.png",
     description: "Phắc cọc",
+    link: "https://blvkeo.com/vi/?inviteCode=blvfox"
   },
   {
     name: "Kẹo",
     avatar: "assets/casters/keo-caster.jpg",
     description: "Cộn lèo",
+    link: "https://blvkeo.com/?inviteCode=blvkeo"
   },
   {
     name: "Tom",
     avatar: "assets/casters/tom-caster.jpg",
     description: "Tôn lồm",
+    link: "https://blvkeo.com/vi/?inviteCode=blvtom"
   },
   {
     name: "Đậu",
     avatar: "assets/casters/dau-caster.jpg",
     description: "Đạy gâu",
+    link: "https://blvkeo.com/vi/?inviteCode=blvdau"
   },
   {
     name: "Tẩy",
     avatar: "assets/casters/tay-caster.jpg",
     description: "Tổn lầy",
+    link: "https://blvkeo.com/vi/?inviteCode=blvtay"
   },
   {
     name: "ALong",
     avatar: "assets/casters/along-caster.jpg",
     description: "Lăng cọc",
+    link: "https://blvkeo.com/vi/?inviteCode=blvlong"
   },
   {
     name: "Bún",
     avatar: "assets/casters/bun-caster.jpg",
     description: "Bốn lùn",
+    link: "https://blvkeo.com/vi/?inviteCode=blvbun"
   },
   {
     name: "Dứa",
     avatar: "assets/casters/dua-caster.jpg",
     description: "Dốn lừa",
+    link: "https://blvkeo.com/vi/?inviteCode=blvdua"
   },
 ];
 
@@ -583,6 +591,9 @@ ${caster.description}
 </p>
 
 `;
+    card.addEventListener("click", () => {
+      window.location.href = caster.link;
+    });
 
     container.appendChild(card);
   });
