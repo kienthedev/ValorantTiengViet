@@ -95,6 +95,12 @@ const castersData = [
     description: "Lúc So",
     link: "https://blvkeo.com/vi/?inviteCode=blvshaw"
   },
+  {
+    name: "Pu",
+    avatar: "assets/casters/po-caster.jpg",
+    description: "Pôn lò",
+    link: "https://blvkeo.com/vi/?inviteCode=blvpo"
+  },
 ];
 
 // ================================
