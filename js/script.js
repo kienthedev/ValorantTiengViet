@@ -66,12 +66,6 @@ const castersData = [
     link: "https://blvkeo.com/vi/?inviteCode=blvdau"
   },
   {
-    name: "Tẩy",
-    avatar: "assets/casters/tay-caster.jpg",
-    description: "Tổn lầy",
-    link: "https://blvkeo.com/vi/?inviteCode=blvtay"
-  },
-  {
     name: "ALong",
     avatar: "assets/casters/along-caster.jpg",
     description: "Lăng cọc",
@@ -82,6 +76,24 @@ const castersData = [
     avatar: "assets/casters/bun-caster.jpg",
     description: "Bốn lùn",
     link: "https://blvkeo.com/vi/?inviteCode=blvbun"
+  },
+  {
+    name: "Nem",
+    avatar: "assets/casters/nem-caster.jpg",
+    description: "Nem chua 36",
+    link: "https://blvkeo.com/vi/?inviteCode=blvnem"
+  },
+  {
+    name: "Cây",
+    avatar: "assets/casters/cay-caster.jpg",
+    description: "Côn lầy",
+    link: "https://blvkeo.com/vi/?inviteCode=blvcay"
+  },
+  {
+    name: "Shaw",
+    avatar: "assets/casters/shaw-caster.jpg",
+    description: "Lúc So",
+    link: "https://blvkeo.com/vi/?inviteCode=blvshaw"
   },
 ];
 
