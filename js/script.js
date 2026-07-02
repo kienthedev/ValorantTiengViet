@@ -66,12 +66,6 @@ const castersData = [
     link: "https://blvkeo.com/vi/?inviteCode=blvdau"
   },
   {
-    name: "ALong",
-    avatar: "assets/casters/along-caster.jpg",
-    description: "Lăng cọc",
-    link: "https://blvkeo.com/vi/?inviteCode=blvlong"
-  },
-  {
     name: "Bún",
     avatar: "assets/casters/bun-caster.jpg",
     description: "Bốn lùn",
@@ -96,7 +90,7 @@ const castersData = [
     link: "https://blvkeo.com/vi/?inviteCode=blvshaw"
   },
   {
-    name: "Pu",
+    name: "Po",
     avatar: "assets/casters/po-caster.jpg",
     description: "Pôn lò",
     link: "https://blvkeo.com/vi/?inviteCode=blvpo"
