@@ -42,58 +42,64 @@ if (location.pathname.endsWith("index.html")) {
 
 const castersData = [
   {
-    name: "Fox",
-    avatar: "assets/casters/fox-caster.png",
-    description: "Phắc cọc",
-    link: "https://blvkeo.com/vi/?inviteCode=blvfox"
+    name: "Đậu",
+    avatar: "assets/casters/dau-caster.jpg",
+    description: "Valorant/Flex",
+    link: "https://daocatba.vip/vi/?inviteCode=blv2"
   },
   {
     name: "Kẹo",
     avatar: "assets/casters/keo-caster.jpg",
-    description: "Cộn lèo",
-    link: "https://blvkeo.com/?inviteCode=blvkeo"
+    description: "Valorant",
+    link: "http://daocatba.vip/vi/?inviteCode=blv1"
   },
   {
     name: "Tom",
     avatar: "assets/casters/tom-caster.jpg",
-    description: "Tôn lồm",
-    link: "https://blvkeo.com/vi/?inviteCode=blvtom"
+    description: "Valorant",
+    link: "https://daocatba.vip/vi/?inviteCode=blv3"
   },
   {
-    name: "Đậu",
-    avatar: "assets/casters/dau-caster.jpg",
-    description: "Đạy gâu",
-    link: "https://blvkeo.com/vi/?inviteCode=blvdau"
-  },
-  {
-    name: "Bún",
-    avatar: "assets/casters/bun-caster.jpg",
-    description: "Bốn lùn",
-    link: "https://blvkeo.com/vi/?inviteCode=blvbun"
-  },
-  {
-    name: "Nem",
-    avatar: "assets/casters/nem-caster.jpg",
-    description: "Nem chua 36",
-    link: "https://blvkeo.com/vi/?inviteCode=blvnem"
-  },
-  {
-    name: "Cây",
-    avatar: "assets/casters/cay-caster.jpg",
-    description: "Côn lầy",
-    link: "https://blvkeo.com/vi/?inviteCode=blvcay"
-  },
-  {
-    name: "Shaw",
-    avatar: "assets/casters/shaw-caster.jpg",
-    description: "Lúc So",
-    link: "https://blvkeo.com/vi/?inviteCode=blvshaw"
+    name: "Fox",
+    avatar: "assets/casters/fox-caster.png",
+    description: "CS2",
+    link: "https://daocatba.vip/vi/?inviteCode=blv4"
   },
   {
     name: "Po",
     avatar: "assets/casters/po-caster.jpg",
-    description: "Pôn lò",
-    link: "https://blvkeo.com/vi/?inviteCode=blvpo"
+    description: "CS2",
+    link: "https://daocatba.vip/vi/?inviteCode=blv9"
+  },
+  {
+    name: "Nem",
+    avatar: "assets/casters/nem-caster.jpg",
+    description: "CS2",
+    link: "https://daocatba.vip/vi/?inviteCode=blv7"
+  },
+  {
+    name: "Shaw",
+    avatar: "assets/casters/shaw-caster.jpg",
+    description: "LoL/Flex",
+    link: "https://daocatba.vip/vi/?inviteCode=blv8"
+  },
+  {
+    name: "Bún",
+    avatar: "assets/casters/bun-caster.jpg",
+    description: "LoL",
+    link: "https://daocatba.vip/vi/?inviteCode=blv5"
+  },
+  {
+    name: "Cá Mập",
+    avatar: "assets/casters/camap-caster.jpg",
+    description: "LoL",
+    link: "https://daocatba.vip/vi/?inviteCode=blv10"
+  },
+  {
+    name: "Mít",
+    avatar: "assets/casters/mit-caster.jpg",
+    description: "Valorant",
+    link: "https://daocatba.vip/vi/?inviteCode=blv6"
   },
 ];
 
