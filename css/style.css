@@ -151,9 +151,17 @@ body::after {
   text-align: right;
 }
 
+
+
 .team-right {
   justify-content: flex-start;
   text-align: left;
+}
+
+@media (max-width:768px){
+  .team-right{
+    flex-direction:column-reverse !important;
+  }
 }
 
 .vs {
@@ -425,7 +433,7 @@ body::after {
   font-weight: 700;
   letter-spacing: 3px;
   opacity: 0.85;
-  margin-left: 70px;
+  margin: 0 70px;
 }
 
 .hero-team-name {
