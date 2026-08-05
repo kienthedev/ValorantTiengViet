@@ -3,37 +3,38 @@
 // ================================
 const scrollbarWidth = window.innerWidth - document.documentElement.clientWidth;
 document.documentElement.style.setProperty(
-  "--scrollbar-width",
-  scrollbarWidth + "px",
+    "--scrollbar-width",
+    scrollbarWidth + "px",
 );
 const SHEET_URL =
-  "https://opensheet.elk.sh/1AZCBokCGdVuIuzhG0Gb3BPqaEoYEhS4UFillUxDRYzs/Sheet1";
+    "https://opensheet.elk.sh/1AZCBokCGdVuIuzhG0Gb3BPqaEoYEhS4UFillUxDRYzs/Sheet1";
 
 let matchesData = [];
 
 if (location.pathname.endsWith("index.html")) {
-  location.replace(location.pathname.replace("index.html", ""));
+    location.replace(location.pathname.replace("index.html", ""));
 }
 
 (function () {
-  const path = window.location.pathname;
+    const path = window.location.pathname;
 
-  // Nếu URL có .html → bỏ đi
-  if (path.endsWith(".html")) {
-    const newPath = path.replace(".html", "");
-    window.history.replaceState({}, "", newPath);
-  }
+    // Nếu URL có .html → bỏ đi
+    if (path.endsWith(".html")) {
+        const newPath = path.replace(".html", "");
+        window.history.replaceState({}, "", newPath);
+    }
 
-  // Nếu truy cập dạng /about → load about.html
-  if (!path.endsWith("/") && !path.includes(".")) {
-    fetch(path + ".html")
-      .then((res) => {
-        if (res.ok) {
-          window.location.replace(path + ".html");
-        }
-      })
-      .catch(() => {});
-  }
+    // Nếu truy cập dạng /about → load about.html
+    if (!path.endsWith("/") && !path.includes(".")) {
+        fetch(path + ".html")
+            .then((res) => {
+                if (res.ok) {
+                    window.location.replace(path + ".html");
+                }
+            })
+            .catch(() => {
+            });
+    }
 })();
 
 // ================================
@@ -41,66 +42,66 @@ if (location.pathname.endsWith("index.html")) {
 // ================================
 
 const castersData = [
-  {
-    name: "Đậu",
-    avatar: "assets/casters/dau-caster.jpg",
-    description: "Valorant/Flex",
-    link: "https://daocatba.vip/vi/?inviteCode=blv2"
-  },
-  {
-    name: "Kẹo",
-    avatar: "assets/casters/keo-caster.jpg",
-    description: "Valorant",
-    link: "http://daocatba.vip/vi/?inviteCode=blv1"
-  },
-  {
-    name: "Tom",
-    avatar: "assets/casters/tom-caster.jpg",
-    description: "Valorant",
-    link: "https://daocatba.vip/vi/?inviteCode=blv3"
-  },
-  {
-    name: "Fox",
-    avatar: "assets/casters/fox-caster.png",
-    description: "CS2",
-    link: "https://daocatba.vip/vi/?inviteCode=blv4"
-  },
-  {
-    name: "Po",
-    avatar: "assets/casters/po-caster.jpg",
-    description: "CS2",
-    link: "https://daocatba.vip/vi/?inviteCode=blv9"
-  },
-  {
-    name: "Nem",
-    avatar: "assets/casters/nem-caster.jpg",
-    description: "CS2",
-    link: "https://daocatba.vip/vi/?inviteCode=blv7"
-  },
-  {
-    name: "Shaw",
-    avatar: "assets/casters/shaw-caster.jpg",
-    description: "LoL/Flex",
-    link: "https://daocatba.vip/vi/?inviteCode=blv8"
-  },
-  {
-    name: "Bún",
-    avatar: "assets/casters/bun-caster.jpg",
-    description: "LoL",
-    link: "https://daocatba.vip/vi/?inviteCode=blv5"
-  },
-  {
-    name: "Cá Mập",
-    avatar: "assets/casters/camap-caster.jpg",
-    description: "LoL",
-    link: "https://daocatba.vip/vi/?inviteCode=blv10"
-  },
-  {
-    name: "Mít",
-    avatar: "assets/casters/mit-caster.jpg",
-    description: "Valorant",
-    link: "https://daocatba.vip/vi/?inviteCode=blv6"
-  },
+    {
+        name: "Đậu",
+        avatar: "assets/casters/dau-caster.jpg",
+        description: "Valorant/Flex",
+        link: "https://daocatba.vip/vi/?inviteCode=blv2"
+    },
+    {
+        name: "Kẹo",
+        avatar: "assets/casters/keo-caster.jpg",
+        description: "Valorant",
+        link: "http://daocatba.vip/vi/?inviteCode=blv1"
+    },
+    {
+        name: "Tom",
+        avatar: "assets/casters/tom-caster.jpg",
+        description: "Valorant",
+        link: "https://daocatba.vip/vi/?inviteCode=blv3"
+    },
+    {
+        name: "Fox",
+        avatar: "assets/casters/fox-caster.png",
+        description: "CS2",
+        link: "https://daocatba.vip/vi/?inviteCode=blv4"
+    },
+    // {
+    //     name: "Po",
+    //     avatar: "assets/casters/po-caster.jpg",
+    //     description: "CS2",
+    //     link: "https://daocatba.vip/vi/?inviteCode=blv9"
+    // },
+    {
+        name: "Nem",
+        avatar: "assets/casters/nem-caster.jpg",
+        description: "CS2",
+        link: "https://daocatba.vip/vi/?inviteCode=blv7"
+    },
+    {
+        name: "Shaw",
+        avatar: "assets/casters/shaw-caster.jpg",
+        description: "LoL/Flex",
+        link: "https://daocatba.vip/vi/?inviteCode=blv8"
+    },
+    {
+        name: "Bún",
+        avatar: "assets/casters/bun-caster.jpg",
+        description: "LoL",
+        link: "https://daocatba.vip/vi/?inviteCode=blv5"
+    },
+    {
+        name: "Cá Mập",
+        avatar: "assets/casters/camap-caster.jpg",
+        description: "LoL",
+        link: "https://daocatba.vip/vi/?inviteCode=blv10"
+    },
+    {
+        name: "Mít",
+        avatar: "assets/casters/mit-caster.jpg",
+        description: "Valorant",
+        link: "https://daocatba.vip/vi/?inviteCode=blv6"
+    },
 ];
 
 // ================================
@@ -110,23 +111,23 @@ const castersData = [
 document.addEventListener("DOMContentLoaded", initApp);
 
 async function initApp() {
-  await loadNavbar();
+    await loadNavbar();
 
-  await loadMatches();
+    await loadMatches();
 
-  if (exists("matches-container")) {
-    showDay("today");
-  }
+    if (exists("matches-container")) {
+        showDay("today");
+    }
 
-  if (exists("hero-carousel")) {
-    initHero();
-  }
+    if (exists("hero-carousel")) {
+        initHero();
+    }
 
-  if (exists("casters-container")) {
-    renderCasters();
-  }
+    if (exists("casters-container")) {
+        renderCasters();
+    }
 
-  await loadFooter();
+    await loadFooter();
 }
 
 // ================================
@@ -134,7 +135,7 @@ async function initApp() {
 // ================================
 
 function exists(id) {
-  return document.getElementById(id);
+    return document.getElementById(id);
 }
 
 // ================================
@@ -142,27 +143,27 @@ function exists(id) {
 // ================================
 
 async function loadNavbar() {
-  const res = await fetch("components/navbar.html");
+    const res = await fetch("components/navbar.html");
 
-  const html = await res.text();
+    const html = await res.text();
 
-  const container = document.getElementById("navbar");
+    const container = document.getElementById("navbar");
 
-  if (!container) return;
+    if (!container) return;
 
-  container.innerHTML = html;
+    container.innerHTML = html;
 
-  setActiveNav();
+    setActiveNav();
 }
 
 function setActiveNav() {
-  const page = window.location.pathname.split("/").pop().replace(".html", "");
+    const page = window.location.pathname.split("/").pop().replace(".html", "");
 
-  document.querySelectorAll(".nav-link").forEach((link) => {
-    if (link.dataset.page === page) {
-      link.classList.add("active");
-    }
-  });
+    document.querySelectorAll(".nav-link").forEach((link) => {
+        if (link.dataset.page === page) {
+            link.classList.add("active");
+        }
+    });
 }
 
 // ================================
@@ -170,15 +171,15 @@ function setActiveNav() {
 // ================================
 
 async function loadMatches() {
-  try {
-    const res = await fetch(SHEET_URL, {
-      cache: "no-store",
-    });
+    try {
+        const res = await fetch(SHEET_URL, {
+            cache: "no-store",
+        });
 
-    matchesData = await res.json();
-  } catch (err) {
-    console.error("Fetch matches error:", err);
-  }
+        matchesData = await res.json();
+    } catch (err) {
+        console.error("Fetch matches error:", err);
+    }
 }
 
 // ================================
@@ -186,17 +187,17 @@ async function loadMatches() {
 // ================================
 
 function getMatchStatus(date, time) {
-  const now = new Date();
+    const now = new Date();
 
-  const matchTime = new Date(`${date} ${time}`);
+    const matchTime = new Date(`${date} ${time}`);
 
-  const diff = (now - matchTime) / 60000;
+    const diff = (now - matchTime) / 60000;
 
-  if (diff >= 0 && diff <= 150) return "live";
+    if (diff >= 0 && diff <= 150) return "live";
 
-  if (diff < 0) return "upcoming";
+    if (diff < 0) return "upcoming";
 
-  return "ended";
+    return "ended";
 }
 
 // ================================
@@ -204,43 +205,43 @@ function getMatchStatus(date, time) {
 // ================================
 
 function renderMatches(targetDate) {
-  const container = document.getElementById("matches-container");
+    const container = document.getElementById("matches-container");
 
-  if (!container) return;
+    if (!container) return;
 
-  container.innerHTML = "";
+    container.innerHTML = "";
 
-  const list = matchesData
-    .filter((m) => m.Date === targetDate)
-    .sort((a, b) => {
-      const statusA = getMatchStatus(a.Date, a.Time);
-      const statusB = getMatchStatus(b.Date, b.Time);
+    const list = matchesData
+        .filter((m) => m.Date === targetDate)
+        .sort((a, b) => {
+            const statusA = getMatchStatus(a.Date, a.Time);
+            const statusB = getMatchStatus(b.Date, b.Time);
 
-      const order = { live: 0, upcoming: 1, ended: 2 };
+            const order = {live: 0, upcoming: 1, ended: 2};
 
-      return order[statusA] - order[statusB];
-    });
+            return order[statusA] - order[statusB];
+        });
 
-  if (list.length === 0) {
-    container.innerHTML = `<p class="text-muted">Không có trận đấu</p>`;
+    if (list.length === 0) {
+        container.innerHTML = `<p class="text-muted">Không có trận đấu</p>`;
 
-    return;
-  }
-
-  list.forEach((match) => {
-    const status = getMatchStatus(match.Date, match.Time);
-
-    const card = document.createElement("div");
-
-    card.className = "match-card";
-    if (match.Livestream) {
-      card.style.cursor = "pointer";
-
-      card.addEventListener("click", () => {
-        window.open(match.Livestream, "_blank");
-      });
+        return;
     }
-    card.innerHTML = `
+
+    list.forEach((match) => {
+        const status = getMatchStatus(match.Date, match.Time);
+
+        const card = document.createElement("div");
+
+        card.className = "match-card";
+        if (match.Livestream) {
+            card.style.cursor = "pointer";
+
+            card.addEventListener("click", () => {
+                window.open(match.Livestream, "_blank");
+            });
+        }
+        card.innerHTML = `
     
 <div class="match-time">${match.Time}</div>
 
@@ -262,10 +263,15 @@ function renderMatches(targetDate) {
 
 
 
+
+<span class="team-name">${match.Team2}</span>
+
 <div class="team-logo-box">
 <img src="${match.Logo2}" class="team-logo">
 </div>
-<span class="team-name">${match.Team2}</span>
+</div>
+</div>
+
 
 </div>
 
@@ -284,26 +290,26 @@ ${status.toUpperCase()}
 </div>
 `;
 
-    container.appendChild(card);
-  });
+        container.appendChild(card);
+    });
 }
 
 function showDay(day) {
-  const date = new Date();
+    const date = new Date();
 
-  if (day === "tomorrow") {
-    date.setDate(date.getDate() + 1);
-  }
+    if (day === "tomorrow") {
+        date.setDate(date.getDate() + 1);
+    }
 
-  const targetDate = getLocalDate(date);
+    const targetDate = getLocalDate(date);
 
-  renderMatches(targetDate);
+    renderMatches(targetDate);
 }
 
 if (exists("matches-container")) {
-  setInterval(() => {
-    showDay("today");
-  }, 60000);
+    setInterval(() => {
+        showDay("today");
+    }, 60000);
 }
 
 // ================================
@@ -314,47 +320,47 @@ let heroIndex = 0;
 let heroSlides = [];
 
 function initHero() {
-  const container = document.getElementById("hero-carousel");
-  if (!container) return;
+    const container = document.getElementById("hero-carousel");
+    if (!container) return;
 
-  const matches = matchesData
-    .filter((m) => getMatchStatus(m.Date, m.Time) !== "ended")
-    .sort((a, b) => {
-      const sa = getMatchStatus(a.Date, a.Time);
-      const sb = getMatchStatus(b.Date, b.Time);
+    const matches = matchesData
+        .filter((m) => getMatchStatus(m.Date, m.Time) !== "ended")
+        .sort((a, b) => {
+            const sa = getMatchStatus(a.Date, a.Time);
+            const sb = getMatchStatus(b.Date, b.Time);
 
-      if (sa === "live") return -1;
-      if (sb === "live") return 1;
+            if (sa === "live") return -1;
+            if (sb === "live") return 1;
 
-      return new Date(`${a.Date} ${a.Time}`) - new Date(`${b.Date} ${b.Time}`);
-    })
-    .slice(0, 5);
+            return new Date(`${a.Date} ${a.Time}`) - new Date(`${b.Date} ${b.Time}`);
+        })
+        .slice(0, 5);
 
-  if (matches.length === 0) {
-    setHeroChannel();
-    return;
-  }
+    if (matches.length === 0) {
+        setHeroChannel();
+        return;
+    }
 
-  container.innerHTML = "";
+    container.innerHTML = "";
 
-  matches.forEach((match, i) => {
-    const slide = document.createElement("div");
+    matches.forEach((match, i) => {
+        const slide = document.createElement("div");
 
-    slide.className = "hero-slide";
-    if (i === 0) slide.classList.add("active");
+        slide.className = "hero-slide";
+        if (i === 0) slide.classList.add("active");
 
-    const status = getMatchStatus(match.Date, match.Time);
-    const bg = match.Background || "assets/hero-bg.jpg";
-    const matchDate = new Date(`${match.Date} ${match.Time}`);
+        const status = getMatchStatus(match.Date, match.Time);
+        const bg = match.Background || "assets/hero-bg.jpg";
+        const matchDate = new Date(`${match.Date} ${match.Time}`);
 
-    const dateStr = matchDate.toLocaleDateString("vi-VN");
-    const timeStr = matchDate.toLocaleTimeString("vi-VN", {
-      hour: "2-digit",
-      minute: "2-digit",
-    });
-    slide.style.backgroundImage = `url(${bg})`;
+        const dateStr = matchDate.toLocaleDateString("vi-VN");
+        const timeStr = matchDate.toLocaleTimeString("vi-VN", {
+            hour: "2-digit",
+            minute: "2-digit",
+        });
+        slide.style.backgroundImage = `url(${bg})`;
 
-    slide.innerHTML = `
+        slide.innerHTML = `
 
 <div class="hero-overlay"></div>
 
@@ -411,110 +417,110 @@ ${dateStr} • ${timeStr}
 
 `;
 
-    if (match.Livestream) {
-      slide.style.cursor = "pointer";
-      slide.onclick = () => window.open(match.Livestream, "_blank");
+        if (match.Livestream) {
+            slide.style.cursor = "pointer";
+            slide.onclick = () => window.open(match.Livestream, "_blank");
+        }
+
+        container.appendChild(slide);
+
+        if (status === "upcoming") {
+            startSlideCountdown(match, `countdown-${i}`);
+        }
+    });
+
+    heroSlides = document.querySelectorAll(".hero-slide");
+
+    startHeroSlider();
+
+    const nextBtn = document.getElementById("hero-next");
+    const prevBtn = document.getElementById("hero-prev");
+
+    if (nextBtn) {
+        nextBtn.onclick = () => changeHeroSlide(1);
     }
 
-    container.appendChild(slide);
-
-    if (status === "upcoming") {
-      startSlideCountdown(match, `countdown-${i}`);
+    if (prevBtn) {
+        prevBtn.onclick = () => changeHeroSlide(-1);
     }
-  });
 
-  heroSlides = document.querySelectorAll(".hero-slide");
-
-  startHeroSlider();
-
-  const nextBtn = document.getElementById("hero-next");
-  const prevBtn = document.getElementById("hero-prev");
-
-  if (nextBtn) {
-    nextBtn.onclick = () => changeHeroSlide(1);
-  }
-
-  if (prevBtn) {
-    prevBtn.onclick = () => changeHeroSlide(-1);
-  }
-
-  enableHeroSwipe();
+    enableHeroSwipe();
 }
 
 let heroTimer = null;
 
 function startHeroSlider() {
-  if (heroSlides.length <= 1) return;
+    if (heroSlides.length <= 1) return;
 
-  const bars = document.querySelectorAll(".hero-progress-bar");
+    const bars = document.querySelectorAll(".hero-progress-bar");
 
-  heroTimer = setInterval(() => {
-    heroSlides[heroIndex].classList.remove("active");
+    heroTimer = setInterval(() => {
+        heroSlides[heroIndex].classList.remove("active");
 
-    heroIndex++;
+        heroIndex++;
 
-    if (heroIndex >= heroSlides.length) heroIndex = 0;
+        if (heroIndex >= heroSlides.length) heroIndex = 0;
 
-    heroSlides[heroIndex].classList.add("active");
+        heroSlides[heroIndex].classList.add("active");
 
-    bars.forEach((bar) => (bar.style.width = "0%"));
+        bars.forEach((bar) => (bar.style.width = "0%"));
 
-    let progress = 0;
+        let progress = 0;
 
-    const progressTimer = setInterval(() => {
-      progress += 2;
-      bars[heroIndex].style.width = progress + "%";
+        const progressTimer = setInterval(() => {
+            progress += 2;
+            bars[heroIndex].style.width = progress + "%";
 
-      if (progress >= 100) clearInterval(progressTimer);
-    }, 100);
-  }, 5000);
+            if (progress >= 100) clearInterval(progressTimer);
+        }, 100);
+    }, 5000);
 }
 
 function changeHeroSlide(dir) {
-  if (heroTimer) {
-    clearInterval(heroTimer);
-    startHeroSlider();
-  }
+    if (heroTimer) {
+        clearInterval(heroTimer);
+        startHeroSlider();
+    }
 
-  if (heroSlides.length === 0) return;
+    if (heroSlides.length === 0) return;
 
-  heroSlides[heroIndex].classList.remove("active");
+    heroSlides[heroIndex].classList.remove("active");
 
-  heroIndex += dir;
+    heroIndex += dir;
 
-  if (heroIndex < 0) heroIndex = heroSlides.length - 1;
-  if (heroIndex >= heroSlides.length) heroIndex = 0;
+    if (heroIndex < 0) heroIndex = heroSlides.length - 1;
+    if (heroIndex >= heroSlides.length) heroIndex = 0;
 
-  heroSlides[heroIndex].classList.add("active");
+    heroSlides[heroIndex].classList.add("active");
 }
 
 function startSlideCountdown(match, elementId) {
-  const el = document.getElementById(elementId);
-  if (!el) return;
+    const el = document.getElementById(elementId);
+    if (!el) return;
 
-  setInterval(() => {
-    const now = new Date();
-    const matchTime = new Date(`${match.Date} ${match.Time}`);
+    setInterval(() => {
+        const now = new Date();
+        const matchTime = new Date(`${match.Date} ${match.Time}`);
 
-    const diff = matchTime - now;
+        const diff = matchTime - now;
 
-    if (diff < 0) return;
+        if (diff < 0) return;
 
-    const h = Math.floor(diff / 3600000);
-    const m = Math.floor((diff % 3600000) / 60000);
-    const s = Math.floor((diff % 60000) / 1000);
-    el.innerText = `Starts in ${h}h ${m}m ${s}s`;
-  }, 1000);
+        const h = Math.floor(diff / 3600000);
+        const m = Math.floor((diff % 3600000) / 60000);
+        const s = Math.floor((diff % 60000) / 1000);
+        el.innerText = `Starts in ${h}h ${m}m ${s}s`;
+    }, 1000);
 }
 
 function setHeroChannel() {
-  const container = document.getElementById("hero-carousel");
+    const container = document.getElementById("hero-carousel");
 
-  if (!container) return;
+    if (!container) return;
 
-  container.innerHTML = `
+    container.innerHTML = `
   
-<div class="hero-slide active" style="background-image:url('assets/hero-bg.jpg')">
+<div class="hero-slide active" style="background-image:url('../assets/hero-bg.jpg')">
 
 <div class="hero-overlay"></div>
 
@@ -534,28 +540,28 @@ let startX = 0;
 let endX = 0;
 
 function enableHeroSwipe() {
-  const carousel = document.getElementById("hero-carousel");
-  if (!carousel) return;
+    const carousel = document.getElementById("hero-carousel");
+    if (!carousel) return;
 
-  carousel.addEventListener("touchstart", (e) => {
-    startX = e.touches[0].clientX;
-  });
+    carousel.addEventListener("touchstart", (e) => {
+        startX = e.touches[0].clientX;
+    });
 
-  carousel.addEventListener("touchmove", (e) => {
-    endX = e.touches[0].clientX;
-  });
+    carousel.addEventListener("touchmove", (e) => {
+        endX = e.touches[0].clientX;
+    });
 
-  carousel.addEventListener("touchend", () => {
-    const diff = startX - endX;
+    carousel.addEventListener("touchend", () => {
+        const diff = startX - endX;
 
-    if (Math.abs(diff) < 50) return;
+        if (Math.abs(diff) < 50) return;
 
-    if (diff > 0) {
-      changeHeroSlide(1); // swipe left -> next
-    } else {
-      changeHeroSlide(-1); // swipe right -> prev
-    }
-  });
+        if (diff > 0) {
+            changeHeroSlide(1); // swipe left -> next
+        } else {
+            changeHeroSlide(-1); // swipe right -> prev
+        }
+    });
 }
 
 // ================================
@@ -563,17 +569,17 @@ function enableHeroSwipe() {
 // ================================
 
 function setText(id, text) {
-  const el = document.getElementById(id);
+    const el = document.getElementById(id);
 
-  if (el) el.innerText = text;
+    if (el) el.innerText = text;
 }
 
 function getLocalDate(date) {
-  const y = date.getFullYear();
-  const m = String(date.getMonth() + 1).padStart(2, "0");
-  const d = String(date.getDate()).padStart(2, "0");
+    const y = date.getFullYear();
+    const m = String(date.getMonth() + 1).padStart(2, "0");
+    const d = String(date.getDate()).padStart(2, "0");
 
-  return `${y}-${m}-${d}`;
+    return `${y}-${m}-${d}`;
 }
 
 // ================================
@@ -581,18 +587,18 @@ function getLocalDate(date) {
 // ================================
 
 function renderCasters() {
-  const container = document.getElementById("casters-container");
+    const container = document.getElementById("casters-container");
 
-  if (!container) return;
+    if (!container) return;
 
-  container.innerHTML = "";
+    container.innerHTML = "";
 
-  castersData.forEach((caster) => {
-    const card = document.createElement("div");
+    castersData.forEach((caster) => {
+        const card = document.createElement("div");
 
-    card.className = "caster-card";
+        card.className = "caster-card";
 
-    card.innerHTML = `
+        card.innerHTML = `
 
 <img src="${caster.avatar}" class="caster-avatar">
 
@@ -603,125 +609,125 @@ ${caster.description}
 </p>
 
 `;
-    card.addEventListener("click", () => {
-      window.location.href = caster.link;
-    });
+        card.addEventListener("click", () => {
+            window.location.href = caster.link;
+        });
 
-    container.appendChild(card);
-  });
+        container.appendChild(card);
+    });
 }
 
 async function loadFooter() {
-  const res = await fetch("components/footer.html");
+    const res = await fetch("components/footer.html");
 
-  const html = await res.text();
+    const html = await res.text();
 
-  const container = document.getElementById("footer");
+    const container = document.getElementById("footer");
 
-  if (!container) return;
+    if (!container) return;
 
-  container.innerHTML = html;
+    container.innerHTML = html;
 }
 
 function setScheduleTab(btn, day) {
-  document
-    .querySelectorAll(".schedule-tab")
-    .forEach((t) => t.classList.remove("active"));
+    document
+        .querySelectorAll(".schedule-tab")
+        .forEach((t) => t.classList.remove("active"));
 
-  btn.classList.add("active");
+    btn.classList.add("active");
 
-  showDay(day);
+    showDay(day);
 }
 
 const fragment = document.createDocumentFragment();
 
-fetch("agents.json", { cache: "force-cache" })
-  .then((res) => res.json())
-  .then((data) => {
-    const container = document.getElementById("agents");
-    if (container) {
-      data.forEach((agent) => {
-        const div = document.createElement("div");
-        div.className = "agent-card";
+fetch("agents.json", {cache: "force-cache"})
+    .then((res) => res.json())
+    .then((data) => {
+        const container = document.getElementById("agents");
+        if (container) {
+            data.forEach((agent) => {
+                const div = document.createElement("div");
+                div.className = "agent-card";
 
-        div.innerHTML = `
+                div.innerHTML = `
   <img loading="lazy" src="${agent.image}" alt="${agent.name}">
   <h3>${agent.name}</h3>
   <p>${agent.role}</p>
   `;
 
-        fragment.appendChild(div);
-      });
+                fragment.appendChild(div);
+            });
 
-      container.appendChild(fragment);
-    }
-  });
+            container.appendChild(fragment);
+        }
+    });
 
 let scrollPosition = 0;
 document.addEventListener("DOMContentLoaded", function () {
-  fetch("components/footer.html")
-    .then((res) => res.text())
-    .then((data) => {
-      const footer = document.getElementById("footer");
+    fetch("components/footer.html")
+        .then((res) => res.text())
+        .then((data) => {
+            const footer = document.getElementById("footer");
 
-      if (footer) {
-        footer.innerHTML = data;
-      }
-      initPolicyModal();
-    });
+            if (footer) {
+                footer.innerHTML = data;
+            }
+            initPolicyModal();
+        });
 });
 
 function initPolicyModal() {
-  const modals = document.querySelectorAll(".policy-modal");
+    const modals = document.querySelectorAll(".policy-modal");
 
-  modals.forEach((modal) => {
-    modal.addEventListener("click", function (e) {
-      if (e.target === modal) {
-        closeModal(modal);
-      }
+    modals.forEach((modal) => {
+        modal.addEventListener("click", function (e) {
+            if (e.target === modal) {
+                closeModal(modal);
+            }
+        });
     });
-  });
 }
 
 function closeModal(modal) {
-  modal.classList.remove("active");
-  document.body.classList.remove("modal-open");
-  window.scrollTo({
-    top: scrollPosition,
-    behavior: "instant",
-  });
+    modal.classList.remove("active");
+    document.body.classList.remove("modal-open");
+    window.scrollTo({
+        top: scrollPosition,
+        behavior: "instant",
+    });
 }
 
 function openPrivacy() {
-  const modal = document.getElementById("privacyModal");
-  scrollPosition = window.scrollY;
-  document.body.classList.add("modal-open");
-  modal.classList.add("active");
+    const modal = document.getElementById("privacyModal");
+    scrollPosition = window.scrollY;
+    document.body.classList.add("modal-open");
+    modal.classList.add("active");
 }
 
 function openTerms() {
-  const modal = document.getElementById("termsModal");
-  scrollPosition = window.scrollY;
-  document.body.classList.add("modal-open");
-  modal.classList.add("active");
+    const modal = document.getElementById("termsModal");
+    scrollPosition = window.scrollY;
+    document.body.classList.add("modal-open");
+    modal.classList.add("active");
 }
 
 function closePrivacy() {
-  const modal = document.getElementById("privacyModal");
-  closeModal(modal);
+    const modal = document.getElementById("privacyModal");
+    closeModal(modal);
 }
 
 function closeTerms() {
-  const modal = document.getElementById("termsModal");
-  closeModal(modal);
+    const modal = document.getElementById("termsModal");
+    closeModal(modal);
 }
 
 document.addEventListener("keydown", function (e) {
-  if (e.key === "Escape") {
-    const modal = document.querySelector(".policy-modal.active");
+    if (e.key === "Escape") {
+        const modal = document.querySelector(".policy-modal.active");
 
-    if (modal) {
-      closeModal(modal);
+        if (modal) {
+            closeModal(modal);
+        }
     }
-  }
 });
