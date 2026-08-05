@@ -264,11 +264,11 @@ function renderMatches(targetDate) {
 
 
 
-<span class="team-name">${match.Team2}</span>
-
 <div class="team-logo-box">
 <img src="${match.Logo2}" class="team-logo">
 </div>
+<span class="team-name">${match.Team2}</span>
+
 </div>
 </div>
 
