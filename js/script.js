@@ -204,6 +204,9 @@ function getMatchStatus(date, time) {
 // SCHEDULE PAGE
 // ================================
 
+let currentDay = "today";
+
+
 function renderMatches(targetDate) {
     const container = document.getElementById("matches-container");
 
@@ -295,20 +298,19 @@ ${status.toUpperCase()}
 }
 
 function showDay(day) {
-    const date = new Date();
 
+    currentDay = day;
+    const date = new Date();
     if (day === "tomorrow") {
         date.setDate(date.getDate() + 1);
     }
-
     const targetDate = getLocalDate(date);
-
     renderMatches(targetDate);
 }
 
 if (exists("matches-container")) {
     setInterval(() => {
-        showDay("today");
+        showDay(currentDay);
     }, 60000);
 }
 
