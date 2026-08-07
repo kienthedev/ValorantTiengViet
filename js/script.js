@@ -202,6 +202,7 @@ function getMatchStatus(date, time) {
 
 // ================================
 // SCHEDULE PAGE
+// Empty comment to trigger a GitHub redeploy :)))
 // ================================
 
 let currentDay = "today";
