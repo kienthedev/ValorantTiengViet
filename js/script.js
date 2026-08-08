@@ -612,10 +612,6 @@ ${caster.description}
 </p>
 
 `;
-        card.addEventListener("click", () => {
-            window.location.href = caster.link;
-        });
-
         container.appendChild(card);
     });
 }
